@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'news_model.dart';
 
 class TmdbService {
-  static const String _apiKey = 'REMOVED_API_KEY';
+  static const String _apiKey = String.fromEnvironment('NEWS_API_KEY');
   static const String _baseUrl = 'https://api.themoviedb.org/3';
 
   Future<List<MovieModel>> fetchPopularMovies() async {
